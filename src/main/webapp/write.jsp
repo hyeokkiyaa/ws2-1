@@ -20,12 +20,54 @@
             margin: auto;
         }
     </style>
+    <script>
+        function validateForm() {
+
+            var name = document.getElementById("name").value;
+            var phoneNum = document.getElementById("phonenum").value;
+            var email = document.getElementById("email").value;
+            var gender = document.getElementById("gender").value;
+            var type = document.getElementById("type").value;
+
+
+            if (name === "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+
+
+            if (phoneNum.length !== 11) {
+                alert("Please enter a valid phone number (e.g., 123-456-7890)");
+                return false;
+            }
+
+
+
+            if (email ==="") {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            if (gender === "") {
+                alert("Please select a gender");
+                return false;
+            }
+
+            if (type === "") {
+                alert("Please select a member type");
+                return false;
+            }
+
+
+            return true;
+        }
+    </script>
 </head>
 <body>
 <jsp:include page="/header.jsp"/>
 
-
-<form class="custom-table" action="write_ok.jsp" method="POST">
+<form class="custom-table" action="write_ok.jsp" method="POST" onsubmit="return validateForm()">
     <h3>Add new member</h3>
     <label for="name">Name</label>
     <br/>
@@ -45,6 +87,7 @@
     <label for="gender">Gender</label>
     <br />
     <select name="gender" id="gender">
+        <option value="">Select Gender</option>
         <option value="m">Male</option>
         <option value="f">Female</option>
     </select>
@@ -53,6 +96,7 @@
     <label for="type">Type</label>
     <br />
     <select name="type" id="type">
+        <option value="">Select Type</option>
         <option value="child">Child</option>
         <option value="student">Student</option>
         <option value="adult">Adult</option>
