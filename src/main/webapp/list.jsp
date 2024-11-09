@@ -15,10 +15,27 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         .custom-table {
-            width: 80%; /* Adjust the width percentage as needed */
-            margin: auto; /* Center the table */
+            width: 80%;
+            margin: auto;
         }
     </style>
+    <script>
+        function delete_item(id) {
+            if (confirm("Do you want to delete the member?")) {
+                location.href = 'delete_ok.jsp?id=' + id;
+            } else {
+                alert("cancel deleting");
+            }
+        }
+        function update_item(id) {
+            if (confirm("Do you want to update the member?")) {
+                location.href = 'edit.jsp?id=' + id;
+            } else {
+                alert("cancel editing");
+            }
+        }
+
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg custom-table">
@@ -40,48 +57,45 @@
         <th scope="col">E-Mail</th>
         <th scope="col">Gender</th>
         <th scope="col">Type</th>
-        <th scope="col">Status</th>
         <th scope="col">Edit/Delete</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <th scope="row">1</th>
-        <td>Mark</td>
+        <td><a href="view.jsp">Mark</a></td>
         <td>123-456-7890</td>
         <td>mark@example.com</td>
         <td>Male</td>
         <td>Student</td>
-        <td>Active</td>
+
         <td class="d-flex mt-1">
-            <img src="img/pencil.svg" alt="edit image">
-            <img src="img/trash3.svg" alt="delete" class="ms-2">
+            <a onclick="update_item(1)"> <img src="img/pencil.svg" alt="edit image"></a>
+            <a onclick="delete_item(1)"> <img src="img/trash3.svg" alt="delete" class="ms-2"></a>
         </td>
     </tr>
     <tr>
         <th scope="row">2</th>
-        <td>Jacob</td>
+        <td><a href="view.jsp">Jacob</a></td>
         <td>098-765-4321</td>
         <td>jacob@example.com</td>
         <td>Male</td>
         <td>Adult</td>
-        <td>Inactive</td>
         <td class="d-flex mt-1">
-            <img src="img/pencil.svg" alt="edit image">
-            <img src="img/trash3.svg" alt="delete" class="ms-2">
+            <a onclick="update_item(2)"><img src="img/pencil.svg" alt="edit image"></a>
+            <a onclick="delete_item(2)"> <img src="img/trash3.svg" alt="delete" class="ms-2"></a>
         </td>
     </tr>
     <tr>
         <th scope="row">3</th>
-        <td>Larry the Bird</td>
+        <td><a href="view.jsp">Larry the Bird</a></td>
         <td>555-555-5555</td>
         <td>larry@twitter.com</td>
         <td>Male</td>
         <td>Senior</td>
-        <td>Active</td>
         <td class="d-flex mt-1">
-            <img src="img/pencil.svg" alt="edit image">
-            <img src="img/trash3.svg" alt="delete" class="ms-2">
+            <a onclick="update_item(3)"><img src="img/pencil.svg" alt="edit image"></a>
+            <a onclick="delete_item(3)"> <img src="img/trash3.svg" alt="delete" class="ms-2"></a>
         </td>
     </tr>
     </tbody>
