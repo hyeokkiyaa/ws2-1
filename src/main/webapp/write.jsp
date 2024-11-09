@@ -5,12 +5,21 @@
   Time: 오전 10:53
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Add</title>
+    <style>
+        .custom-table {
+            width: 80%; /* Adjust the width percentage as needed */
+            margin: auto; /* Center the table */
+        }
+    </style>
 </head>
 <body>
-
+    <jsp:include page="/header.jsp"/>
+        <div class="custom-table">
+            <h3>Add new member</h3>
+        </div>
+    <jsp:include page="/footer.jsp"/>
 </body>
 </html>

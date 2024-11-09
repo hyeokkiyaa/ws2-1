@@ -25,7 +25,7 @@
     <div class="container-fluid">
         <h3>List of members</h3>
         <form class="d-flex" role="search">
-            <button type="button" class="btn btn-outline-success"><img src="img/plus-lg.svg" alt="plus sign"></button>
+            <a class="btn btn-outline-success" href="write.jsp"><img src="img/plus-lg.svg" alt="plus sign" /></a>
             <input class="form-control me-2 ms-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
