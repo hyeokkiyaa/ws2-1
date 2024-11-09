@@ -24,9 +24,9 @@
 <nav class="navbar navbar-expand-lg custom-table">
     <div class="container-fluid">
         <h3>List of members</h3>
-
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button type="button" class="btn btn-outline-success"><img src="img/plus-lg.svg" alt="plus sign"></button>
+            <input class="form-control me-2 ms-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </div>
@@ -55,7 +55,7 @@
         <td>Active</td>
         <td class="d-flex mt-1">
             <img src="img/pencil.svg" alt="edit image">
-            <img src="img/trash3.svg" alt="delete">
+            <img src="img/trash3.svg" alt="delete" class="ms-2">
         </td>
     </tr>
     <tr>
@@ -68,7 +68,7 @@
         <td>Inactive</td>
         <td class="d-flex mt-1">
             <img src="img/pencil.svg" alt="edit image">
-            <img src="img/trash3.svg" alt="delete">
+            <img src="img/trash3.svg" alt="delete" class="ms-2">
         </td>
     </tr>
     <tr>
@@ -81,7 +81,7 @@
         <td>Active</td>
         <td class="d-flex mt-1">
             <img src="img/pencil.svg" alt="edit image">
-            <img src="img/trash3.svg" alt="delete">
+            <img src="img/trash3.svg" alt="delete" class="ms-2">
         </td>
     </tr>
     </tbody>
